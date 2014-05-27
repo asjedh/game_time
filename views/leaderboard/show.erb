@@ -1,0 +1,9 @@
+<h2>Leaderboard</h2>
+
+  <ol>
+  <% @sorted_leaderboard.each do |team, info| %>
+    <li> <a href="/teams/<%= team %>"> <%= "#{team}" %></a><%= " #{info[:wins]}-#{info[:losses]}" %></li>
+  <% end %>
+  </ol>
+
+<br>

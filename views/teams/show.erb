@@ -1,0 +1,8 @@
+<h3><%="#{@team_name} #{@sorted_leaderboard[@team_name][:wins]}-#{@sorted_leaderboard[@team_name][:losses]}" %></h3>
+<br>
+
+<ol>
+  <% @teams_games.each do |game| %>
+    <li> <%= "Home: #{game[:home_team]} #{game[:home_score]}, Away: #{game[:away_team]} #{game[:away_score]} "%></li>
+  <% end %>
+</ol>
